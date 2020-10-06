@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+.parallax {
+	height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+	perspective: 1px;
+}
+
+.parallax-layer-back {
+	height: 100vh;
+	transform: translateZ(-1px) scale(2.02);
+}
+
+.parallax-image {
+	height: 100%;
+	background: url(Images/starry_sky_tree_sand_124955_1920x1080.jpg) no-repeat;
+	background-position: 65% 70%;
+	background-size: cover;
+}
+
+.parallax-layer-base {
+	position: relative;
+	background: grey;
+	height: 100%;
+}
+
+.container {
+	height: 100vh;
+	background: orange;
+}
+
+header {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100px;
+	background: black;
+}
+
+

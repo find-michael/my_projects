@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Video App</title>
+</head>
+<body>
+	<main>
+		<section class="video-section">
+			<div class="video-container">
+				<div class="video-top">
+					<div class="current-video-title"></div>
+					<div class="next-video-title"></div>
+				</div>
+				<div class="video-main">
+					<video class="video-player" controls playsinline></video>
+					<div class="video-play-icon">
+						<svg aria-hidden="true" focusable="false" data-icon="play" class="video-icon" viewBox="0 0 448 512"><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+					</div>
+				</div>
+				<div class="video-bottom">
+					<img src="" class="sound-wave">
+					<input type="range" min="0" max="" value="" step="0.01" class="sound-wave-time">
+				</div>
+			</div>
+		</section>
+		<section class="playlist-section">
+			<div class="playlist-top-container">
+				<div class="playlist-sort-random">
+					<div class="playlist-sort-random-items playlist-sort">
+						<svg aria-hidden="true" focusable="false" data-icon="sort-amount-down" class="playlist-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M304 416h-64a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm-128-64h-48V48a16 16 0 0 0-16-16H80a16 16 0 0 0-16 16v304H16c-14.19 0-21.37 17.24-11.29 27.31l80 96a16 16 0 0 0 22.62 0l80-96C197.35 369.26 190.22 352 176 352zm256-192H240a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h192a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm-64 128H240a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM496 32H240a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h256a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg>
+						<span>Sort by date</span>
+					</div>
+					<div class="playlist-sort-random-items playlist-random" style="display: none">
+						<svg aria-hidden="true" focusable="false" data-icon="dice" class="playlist-icon" viewBox="0 0 640 512"><path fill="currentColor" d="M592 192H473.26c12.69 29.59 7.12 65.2-17 89.32L320 417.58V464c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48V240c0-26.51-21.49-48-48-48zM480 376c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm-46.37-186.7L258.7 14.37c-19.16-19.16-50.23-19.16-69.39 0L14.37 189.3c-19.16 19.16-19.16 50.23 0 69.39L189.3 433.63c19.16 19.16 50.23 19.16 69.39 0L433.63 258.7c19.16-19.17 19.16-50.24 0-69.4zM96 248c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm128 128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm0-128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm0-128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24zm128 128c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z"></path></svg>
+						<span>Randomize</span>
+					</div>
+				</div>
+				<div class="playlist-autoplay">
+					<label><input id="autoplay-checkbox" class="checkbox-design" type="checkbox" checked="" data-checkbox="autoplay" data-filter-checkbox="false"><span>Autoplay</span></label>
+				</div>
+			</div>
+			<div class="playlist-main-container"></div>
+		</section>
+		<section class="nav-section">
+			<nav>
+				<div class="nav-logo">MA JK</div>
+				<div class="nav-search nav-icon-div nav-slideable" data-nav="search">
+					<svg aria-hidden="true" focusable="false" data-icon="search" class="nav-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+					<span>Search</span>
+				</div>
+				<div class="nav-filter nav-icon-div nav-slideable" data-nav="filter">
+					<svg aria-hidden="true" focusable="false" data-icon="filter" class="nav-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path></svg>
+					<span>Filter</span>
+				</div>
+				<div class="nav-go-to-playlist-start nav-icon-div" data-nav="go-to-playlist-start">
+					<svg aria-hidden="true" focusable="false" data-icon="angle-double-up" class="nav-icon" viewBox="0 0 320 512"><path fill="currentColor" d="M177 255.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 351.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 425.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1zm-34-192L7 199.7c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l96.4-96.4 96.4 96.4c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9l-136-136c-9.2-9.4-24.4-9.4-33.8 0z"></path></svg>
+					<span>Go top</span>
+				</div>
+				<div class="nav-find-current nav-icon-div" data-nav="find-current">
+					<svg aria-hidden="true" focusable="false" data-icon="map-marker-alt" class="nav-icon" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
+					<span>Find</span>
+				</div>
+				<div class="nav-settings nav-icon-div nav-slideable" data-nav="settings">
+					<svg aria-hidden="true" focusable="false" data-icon="cog" class="nav-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg>
+					<span>Settings</span>
+				</div>
+			</nav>
+		</section>
+		<div class="search-container slide">
+			<div class="search-input">
+				<input type="search" spellcheck="false">
+			</div>
+			<div class="search-results-number"><span></span></div>
+			<div class="search-results"></div>
+		</div>
+		<div class="filter-container slide">
+			<div class="filter-category">
+				<span class="filter-category-span">Choose Video Category</span>
+				<div class="fast-settings category-fast-settings">
+					<div class="fast-check-all" data-filter-fast-settings="category" data-settings="check-all"></div>
+					<div class="fast-toggle" data-filter-fast-settings="category" data-settings="toggle">Toggle</div>
+					<div class="fast-uncheck-all" data-filter-fast-settings="category" data-settings="uncheck-all"></div>
+				</div>
+				<label class="label-music">
+					<span>Music</span>
+					<input class="checkbox-design category-checkbox" type="checkbox" checked data-checkbox="music" data-checkbox-type="category">
+				</label>
+				<label class="label-other">
+					<span>Other</span>
+					<input class="checkbox-design category-checkbox" type="checkbox" data-checkbox="other" data-checkbox-type="category">
+				</label>
+				</label>
+			</div>
+			<div class="filter-hashtags">
+				<span class="filter-hashtags-span"># Your Hashtags</span>
+				<div class="fast-settings hashtags-fast-settings">
+					<div class="fast-check-all" data-filter-fast-settings="hashtag" data-settings="check-all"></div>
+					<div class="fast-toggle" data-filter-fast-settings="hashtag" data-settings="toggle">Toggle</div>
+					<div class="fast-uncheck-all" data-filter-fast-settings="hashtag" data-settings="uncheck-all"></div>
+				</div>
+				<div class="filter-hashtags-checkboxes">
+					<div class="filter-hashtags-checkboxes-left"></div>
+					<div class="filter-hashtags-checkboxes-right"></div>
+				</div>
+			</div>
+			<div class="apply-filter-changes">
+				<div class="strict-soft-filter">Strict</div>
+				<button>Apply Changes</button>
+			</div>
+		</div>
+		<div class="settings-container slide"></div>
+	</main>
+
+	<script src="../videos_array.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
