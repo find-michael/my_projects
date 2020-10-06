@@ -7,7 +7,7 @@ import numpy as np
 import os
 from statistics import mean, median
 
-src = "C:/Users/MaJK/Desktop/test2.mp4"
+src = "F:/Users/User/Desktop/test.mp4"
 
 audio = AudioSegment.from_file(src)
 data = np.frombuffer(audio._data, np.int16)
@@ -60,4 +60,4 @@ for item in max_array:
 
 # draw.line((0, BAR_HEIGHT/2, current_x-LINE_WIDTH+1, BAR_HEIGHT/2), fill=(50, 50, 50), width=1)
 im.show()
-# im.save("C:/Users/MaJK/Desktop/geeks.png")
+# im.save("F:/Users/User/Desktop/test.png")
