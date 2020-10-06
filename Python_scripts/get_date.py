@@ -4,10 +4,10 @@ from datetime import datetime
 import json
 import sys
 
-videos_dir_path = 'E:\\Muzyka\\websiteMusic\\'
+videos_dir_path = 'F:\\Videos\\'
 videos_extension = '.mp4'
 datetime_format = '%Y-%m-%d %H:%M:%S'
-json_file_name = 'C:\\Users\\MaJK\\Desktop\\video_app\\videos_array.js'
+json_file_name = 'F:\\Users\\User\\Desktop\\video_app\\videos_array.js'
 
 videos_path = glob(f'{videos_dir_path}*{videos_extension}')
 
@@ -33,5 +33,5 @@ new_array = json.dumps(ready_to_json, indent=4, ensure_ascii=False).encode('utf8
 print(new_array.decode())
 
 with open(json_file_name, 'a', encoding='utf-8') as f:
-	f.write(f'// last backup: {datetime.now().strftime(datetime_format)}\n// videos directory\nvar videos_file = "E:/Muzyka/websiteMusic/";\n\nvar videos_array = ')
+	f.write(f'// last backup: {datetime.now().strftime(datetime_format)}\n// videos directory\nvar videos_file = "F:/Videos/";\n\nvar videos_array = ')
 
