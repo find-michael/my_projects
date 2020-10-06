@@ -2,7 +2,7 @@ import os
 from glob import glob
 import sys
 
-videos_dir_path = 'E:\\Muzyka\\websiteMusic\\'
+videos_dir_path = 'F:\\Videos\\'
 videos_extension = '.mp4'
 
 videos_path = glob(f'{videos_dir_path}*{videos_extension}')
