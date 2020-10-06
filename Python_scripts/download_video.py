@@ -24,7 +24,6 @@ video_category = 'music'
 
 videos_dir_path = 'E:/Muzyka/websiteMusic/'
 website_directory = 'C:/Users/MaJK/Desktop/video_app/'
-# website_directory = 'C:/Users/MaJK/Desktop/Programing/IV/Website/'
 video_array_path = f'{website_directory}videos_array.js'
 video_resolution = '360p30'
 video_extension = 'mp4'
