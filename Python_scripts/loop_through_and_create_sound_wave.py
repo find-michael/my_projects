@@ -18,7 +18,7 @@ for subdir, dirs, files in os.walk(rootdir):
 			# print(video_path)
 			# print(file_path)
 
-			if file_path.replace('E:\\Muzyka\\websiteMusic\\', '') == 'KSHMR & Bassjackers ft. Sirah - Memories  (Matson Re-Boot 2017) + DOWNLOAD':
+			if file_path.replace('E:\\Muzyka\\websiteMusic\\', '') == 'DEAF KEV - Safe & Sound with Sendi Hoxha [NCS Release]':
 				go = True
 
 			if go:
