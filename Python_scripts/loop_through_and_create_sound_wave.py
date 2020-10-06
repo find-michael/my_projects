@@ -7,7 +7,7 @@ import os
 from statistics import mean, median
 
 
-rootdir = 'E:\\Muzyka\\websiteMusic'
+rootdir = 'F:\\Videos'
 go = None
 
 for subdir, dirs, files in os.walk(rootdir):
@@ -18,12 +18,12 @@ for subdir, dirs, files in os.walk(rootdir):
 			# print(video_path)
 			# print(file_path)
 
-			if file_path.replace('E:\\Muzyka\\websiteMusic\\', '') == 'DEAF KEV - Safe & Sound with Sendi Hoxha [NCS Release]':
+			if file_path.replace('F:\\Videos\\', '') == 'DEAF KEV - Safe & Sound with Sendi Hoxha [NCS Release]':
 				go = True
 
 			if go:
 
-				print(file_path.replace('E:\\Muzyka\\websiteMusic\\', ''))
+				print(file_path.replace('F:\\Videos\\', ''))
 				src = video_path
 
 				audio = AudioSegment.from_file(src)
