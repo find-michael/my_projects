@@ -1,0 +1,41 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+    {% trans "Kontakt" %}
+{% endblock %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static "css/contact.css" %}">
+{% endblock %}
+
+{% block content %}
+<section class="contact">
+    <div class="company-info">
+        <div class="title">{% trans "Dane firmy" %}</div>
+        <ul>
+            <li>MójSklep, spółka z o.o.</li>
+            <li>Zadaniowa 9/5</li>
+            <li>xxx-xxx Wrocław</li>
+            <li>Polska</li>
+            <li>REGON: xxxxxxxx</li>
+            <li>NIP: PLxxxxxxxx</li>
+            <li>{% trans "Telefon" %}: +48 xxx xxx xxx</li>
+        </ul>
+    </div>
+    <div class="company-contact">
+        <form action="." method="post" class="contact-form">
+            <div class="title">{% trans "Napisz do nas" %}</div>
+            {{ form.as_p }}
+            <p>
+                <input id="contact-form-submit" type="submit" value="{% trans "Wyślij" %}">
+            </p>
+            {% if success %}
+                <div class="success">{% trans "Email został wysłany" %}</div>
+            {% endif %}
+            {% csrf_token %}
+        </form>
+    </div>
+</section>
+{% endblock %}

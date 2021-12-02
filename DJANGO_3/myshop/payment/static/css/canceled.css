@@ -1,0 +1,8 @@
+#content {
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+p {
+    padding: 1rem;
+}

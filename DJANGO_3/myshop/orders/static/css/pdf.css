@@ -1,0 +1,115 @@
+body {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.shop-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 25rem;
+    font-weight: bold;
+    opacity: .05;
+}
+
+.shop-name {
+    text-align: right;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.bill-number {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.bill-number span {
+    font-weight: bold;
+}
+
+.bill-created {
+    opacity: .7;
+}
+
+#buyer, #order, #bill, #status {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#bill {
+    margin: .5rem 0 1rem 0;
+}
+
+#status {
+    margin: 3rem 0 0 0;
+}
+
+.buyer-data > div {
+    margin: .5rem 0;
+}
+
+.names, .code-city {
+    display: flex;
+}
+
+.first-name, .code {
+    margin-right: 3rem;
+}
+
+.first-name, .last-name, .address, .city {
+    text-transform: capitalize;
+}
+
+.data-item {
+    opacity: .7;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+}
+
+table th, table td {
+    text-align: left;
+    font-size: 1rem;
+    padding: .6rem;
+    margin: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background: lightgrey;
+}
+
+thead th, tbody tr.total {
+    background: grey;
+    color: white;
+    font-weight: bold;
+}
+
+.number {
+    text-align: right;
+}
+
+.paid, .pending {
+    color:#199630;
+    border: .25rem solid #199630;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: .3rem .6rem;
+    float: right;
+    box-sizing: border-box;
+    max-width: 20rem;
+}
+
+.pending {
+    color: #a82d2d;
+    border: .25rem solid #a82d2d;
+}

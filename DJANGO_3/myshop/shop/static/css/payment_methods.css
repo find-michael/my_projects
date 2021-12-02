@@ -1,0 +1,14 @@
+section.payment-methods {
+    padding: 2rem 10% 6rem 10%;
+}
+
+.title {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section.payment-methods p {
+    margin: 2rem;
+}

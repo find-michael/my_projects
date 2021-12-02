@@ -1,0 +1,509 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-12 02:40+0200\n"
+"PO-Revision-Date: 2021-05-11 01:39+0000\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
+
+#: .\cart\forms.py:7 .\cart\templates\cart\detail.html:30
+#: .\orders\templates\orders\order\pdf.html:34
+msgid "Ilość"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:6 .\shop\templates\shop\base.html:28
+msgid "Koszyk"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:17
+msgid "Twój koszyk"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:20 .\cart\templates\cart\detail.html:101
+msgid "Kontynuuj zakupy"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:28
+msgid "Zdjęcie"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:29
+#: .\orders\templates\orders\order\pdf.html:32
+msgid "Produkt"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:31 .\cart\templates\cart\detail.html:58
+msgid "Usuń"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:32
+#: .\orders\templates\orders\order\pdf.html:33
+msgid "Cena"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:33
+msgid "Zsumowana wartość"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:54
+msgid "Zmień"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:66
+#: .\orders\templates\orders\order\create.html:32
+msgid "Wartość całkowita"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:72
+#, python-format
+msgid ""
+"\n"
+"                            Kupon \"%(code)s\" (%(discount)s%% rabatu)\n"
+"                            "
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:83
+#: .\orders\templates\orders\order\pdf.html:48
+msgid "Kwota do zapłaty"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:93
+msgid "Posiadasz kod rabatowy?"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:96
+msgid "Zatwierdź"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:102
+#: .\payment\templates\payment\process.html:27
+msgid "Zapłać"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:107
+#: .\shop\templates\shop\product\detail.html:43
+msgid "Z tym produktem klienci kupowali również:"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:125
+msgid "Twój koszyk jest pusty."
+msgstr ""
+
+#: .\contact\forms.py:5 .\orders\models.py:10
+#: .\orders\templates\orders\order\pdf.html:17
+msgid "Imię"
+msgstr ""
+
+#: .\contact\forms.py:6 .\orders\templates\orders\order\pdf.html:20
+msgid "Email"
+msgstr ""
+
+#: .\contact\forms.py:7
+msgid "Wiadomość"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:6
+#: .\shop\templates\shop\base.html:54
+msgid "Kontakt"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:16
+msgid "Dane firmy"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:24
+msgid "Telefon"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:29
+msgid "Napisz do nas"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:32
+#: .\shop\templates\shop\base.html:103
+msgid "Wyślij"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:35
+msgid "Email został wysłany"
+msgstr ""
+
+#: .\coupons\forms.py:8
+msgid "Wpisz go tutaj"
+msgstr ""
+
+#: .\myshop\settings.py:130
+msgid "polski"
+msgstr "Polski"
+
+#: .\myshop\settings.py:131
+msgid "angielski"
+msgstr "Angielski"
+
+#: .\myshop\urls.py:24
+msgid "admin/"
+msgstr "administrator/"
+
+#: .\myshop\urls.py:25
+msgid "cart/"
+msgstr "koszyk/"
+
+#: .\myshop\urls.py:26 .\orders\urls.py:8
+msgid "create/"
+msgstr "stworz/"
+
+#: .\myshop\urls.py:27
+msgid "payment/"
+msgstr "platnosc/"
+
+#: .\myshop\urls.py:28
+msgid "coupons/"
+msgstr "kupony/"
+
+#: .\myshop\urls.py:29
+msgid "contact/"
+msgstr ""
+
+#: .\orders\models.py:11 .\orders\templates\orders\order\pdf.html:18
+msgid "Nazwisko"
+msgstr ""
+
+#: .\orders\models.py:12
+msgid "E-mail"
+msgstr ""
+
+#: .\orders\models.py:13 .\orders\templates\orders\order\pdf.html:21
+msgid "Adres"
+msgstr ""
+
+#: .\orders\models.py:14
+msgid "Kod_pocztowy"
+msgstr ""
+
+#: .\orders\models.py:15 .\orders\templates\orders\order\pdf.html:24
+msgid "Miejscowość"
+msgstr ""
+
+#: .\orders\tasks.py:13
+msgid "Zamówienie nr {}"
+msgstr ""
+
+#: .\orders\tasks.py:14
+msgid ""
+"Witaj, {}!\n"
+"\n"
+"Złożyłeś zamówienie w naszym sklepie.\n"
+"\n"
+"Identyfikator twojego zamówienia to {}"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:6
+#: .\orders\templates\orders\order\create.html:12
+msgid "Kasa"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:15
+msgid "Twoje zamówienie"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:25
+#, python-format
+msgid ""
+"\n"
+"                        \"%(code)s\" (%(discount)s%% rabatu)\n"
+"                    "
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:36
+msgid "Dane do zamówienia"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:38
+msgid "Złóż zamówienie"
+msgstr ""
+
+#: .\orders\templates\orders\order\created.html:6
+#: .\orders\templates\orders\order\created.html:10
+msgid "Dziękujemy za złożenie zamówienia!"
+msgstr ""
+
+#: .\orders\templates\orders\order\created.html:11
+msgid "Twoje zamówienie jest w trakcie realizacji. Numer twojego zamówienia to"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:6 .\shop\templates\shop\base.html:7
+#: .\shop\templates\shop\base.html:86
+msgid "Mój sklep"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:8
+msgid "Rachunek"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:10
+msgid "Numer zamówienia"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:11
+msgid "Data złożenia zamówienia"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:14
+msgid "Dane kupującego"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:23
+msgid "Kod pocztowy"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:28
+msgid "Zamówienie"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:35
+msgid "Koszt"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:54
+msgid "Status zamówienia"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:56
+msgid "Opłacone"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:56
+msgid "Oczekiwanie na płatność"
+msgstr ""
+
+#: .\payment\tasks.py:18
+msgid "Mój sklep - zamówienie nr {}"
+msgstr ""
+
+#: .\payment\tasks.py:19
+msgid ""
+"W załączniku przesyłamy rachunek dla ostatniego zakupu.\n"
+"\n"
+"Dziękujemy, że zdecydowałeś/aś się na zakupy w naszym sklepie!"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:9
+msgid "Płatność zakończona niepowodzeniem"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:12
+msgid "Twoja płatność zakończyła się niepowodzeniem"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:13
+msgid "Nie otrzymano płatności"
+msgstr ""
+
+#: .\payment\templates\payment\done.html:9
+msgid "Płatność zakończona"
+msgstr ""
+
+#: .\payment\templates\payment\done.html:12
+msgid "Twoja płatność zakończyła się powodzeniem"
+msgstr ""
+
+#: .\payment\templates\payment\done.html:13
+msgid "Płatność otrzymana"
+msgstr ""
+
+#: .\payment\templates\payment\done.html:14
+msgid "Numer twojego zamówienia to"
+msgstr ""
+
+#: .\payment\templates\payment\done.html:15
+msgid ""
+"Na email podany w zamówieniu został wysłany rachunek. Dziękujemy za "
+"skorzystanie z naszego sklepu"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:13
+msgid "Zapłać swoją kartą kredytową"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:16
+msgid "Numer karty"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:19
+msgid "CVV"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:22
+msgid "Data ważności"
+msgstr ""
+
+#: .\payment\urls.py:8
+msgid "process/"
+msgstr "przetwarzanie/"
+
+#: .\payment\urls.py:9
+msgid "done/"
+msgstr "zrobione/"
+
+#: .\payment\urls.py:10
+msgid "canceled/"
+msgstr "przerwane/"
+
+#: .\shop\forms.py:9
+msgid "Wpisz tutaj"
+msgstr ""
+
+#: .\shop\forms.py:15
+msgid "Zapisz się do newslettera!"
+msgstr ""
+
+#: .\shop\forms.py:17
+msgid "Wpisz tutaj swój email"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:43
+msgid "Konto"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:44
+msgid "Wkrótce"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:64
+msgid "Język"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:72
+msgid "Dostępne języki"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:94
+msgid "Korzystanie z serwisu oznacza akceptację"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:94
+msgid "regulaminu"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:95
+msgid "Nasza strona wykorzystuje"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:95
+msgid "pliki cookies"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:96
+msgid "Sprawdź"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:96
+msgid "wszelkie informacje związane z dostawą"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:97
+msgid "Wspierane"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:97
+msgid "metody płatności"
+msgstr ""
+
+#: .\shop\templates\shop\cookies.html:6 .\shop\templates\shop\cookies.html:15
+msgid "Cookies"
+msgstr ""
+
+#: .\shop\templates\shop\delivery.html:6
+msgid "Dostawa - informacje"
+msgstr ""
+
+#: .\shop\templates\shop\delivery.html:15
+msgid "Koszty dostawy"
+msgstr ""
+
+#: .\shop\templates\shop\delivery.html:19
+msgid "Czas dostawy"
+msgstr ""
+
+#: .\shop\templates\shop\payment_methods.html:6
+#: .\shop\templates\shop\payment_methods.html:15
+msgid "Metody płatności"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:26
+msgid "Kategoria:"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:29
+msgid "Cena:"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:33
+msgid "Dodaj do koszyka"
+msgstr ""
+
+#: .\shop\templates\shop\product\detail.html:36
+msgid "Opis:"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:6
+msgid "Produkty"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:15
+msgid "Znajdź produkt"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:18
+msgid "Szukaj"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:20
+msgid "Kategorie"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:23
+msgid "Wszystkie"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:46
+msgid "Wszystkie produkty"
+msgstr ""
+
+#: .\shop\templates\shop\terms.html:6 .\shop\templates\shop\terms.html:15
+msgid "Regulamin"
+msgstr ""
+
+#: .\shop\urls.py:8
+msgid "cookies/"
+msgstr ""
+
+#: .\shop\urls.py:9
+msgid "terms/"
+msgstr "regulamin/"
+
+#: .\shop\urls.py:10
+msgid "delivery/"
+msgstr "dostawa/"
+
+#: .\shop\urls.py:11
+msgid "payment-methods/"
+msgstr "metody-platnosci/"
+
+#~ msgid "Coupon"
+#~ msgstr "Kupon"

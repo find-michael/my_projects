@@ -1,0 +1,14 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static "css/canceled.css" %}">
+{% endblock %}
+
+{% block title %}{% trans "Płatność zakończona niepowodzeniem" %}{% endblock %}
+
+{% block content %}
+<h2>{% trans "Twoja płatność zakończyła się niepowodzeniem" %}!</h2>
+<p>{% trans "Nie otrzymano płatności" %}.</p>
+{% endblock %}

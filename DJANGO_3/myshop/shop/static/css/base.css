@@ -1,0 +1,335 @@
+
+/* :root {
+    --nav-width: 6.5rem;
+    --nav-top-height: 10rem;
+    --nav-background: grey;
+    --nav-background-hover: darkgrey;
+    --logo-box-background: #dcdcdc;
+} */
+
+:root {
+    --nav-width: 6.5rem;
+    --nav-top-height: 10rem;
+    --nav-background: #b6937c;
+    --nav-background-hover: #DFBFA1;
+    --logo-box-background: #EDD4B2;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--nav-width));
+    height: 100vh;
+    background: linear-gradient(to left, var(--nav-background), var(--logo-box-background));
+    z-index: -1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: var(--nav-width);
+    background: var(--nav-background);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    width: 5rem;
+    height: 6rem;
+    box-sizing: content-box;
+    border-bottom: 2px solid black;
+    margin: .5rem;
+    cursor: pointer;
+    transition: ease-in-out .2s background;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item:nth-child(1) {
+    height: 5rem;
+}
+
+.nav-item > div:nth-child(1) {
+    height: 5rem;
+}
+
+#nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-box {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item > div:nth-child(2) {
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Jockey One', sans-serif;
+    line-height: .9;
+}
+
+.nav-item:hover {
+    background: var(--nav-background-hover);
+}
+
+#nav-contact {
+    margin-top: auto;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+#nav-top {
+    margin-right: var(--nav-width);
+    height: var(--nav-top-height);
+    width: auto;
+    background: var(--logo-box-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: var(--nav-top-height);
+}
+
+#company-name-box {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+#content {
+    margin-right: var(--nav-width);
+    display: flex;
+    min-height: calc(100vh - var(--nav-top-height));
+    background: linear-gradient(to left, var(--nav-background), var(--logo-box-background));
+}
+
+#cart-items-count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: #a47be6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#cart-items-count span {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+footer {
+    background: var(--nav-background);
+    padding: 2rem 5rem;
+    margin-right: var(--nav-width);
+    display: flex;
+}
+
+.footer-links {
+    width: 50%;
+}
+
+.footer-links div {
+    padding: 1rem;
+}
+
+.footer-links div a {
+    color: var(--logo-box-background);
+    font-weight: 500;
+}
+
+.language-list {
+    position: absolute;
+    right: var(--nav-width);
+    width: 25rem;
+    height: 100%;
+    background: var(--nav-background);
+    display: none;
+    padding: 2rem;
+}
+
+.blurred {
+    animation: blurring .5s forwards;
+}
+
+@keyframes blurring {
+    from {}
+    to {filter: blur(10px);}
+}
+
+.blurred-out {
+    animation: blurring-out .2s forwards;
+}
+
+@keyframes blurring-out {
+    from {filter: blur(10px);}
+    to {filter: blur(0);}
+}
+
+.nav-active {
+    background: var(--nav-background-hover);
+}
+
+.language-list-title {
+    margin: 3rem 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.language-list ul {
+    padding-left: 1rem;
+}
+
+.language-list ul li {
+    list-style-type: none;
+    margin: .5rem 2rem .5rem 0;
+}
+
+.language-list ul li a {
+    padding: 1rem;
+    transition: background .2s ease-in-out;
+    display: flex;
+}
+
+.language-list ul li a:hover {
+    background: var(--logo-box-background);
+}
+
+.selected-language {
+    background: var(--logo-box-background);
+    font-weight: bold;
+}
+
+.language-list ul li a img {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.language-list ul li a span {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    color: var(--logo-box-background);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: .15rem solid var(--logo-box-background);
+    background: black;
+    border-radius: .5rem;
+    padding: .2rem;
+    min-width: 6rem;
+    text-align: center;
+}
+
+.footer-right {
+    width: 50%;
+}
+
+#newsletter-form {
+    padding: 1rem;
+}
+
+#newsletter-box {
+    float: right;
+}
+
+#newsletter-form label {
+    display: block;
+    text-align: right;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+#newsletter-form input {
+    height: 2rem;
+}
+
+#newsletter-form input[type='text'] {
+    min-width: 13rem;
+    font-size: .9rem;
+}
+
+#newsletter-form input[type='submit'] {
+    min-width: 5rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+#socials-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 3rem 3rem 1rem 1rem;
+}
+
+#socials-box a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 .5rem;
+    transition: background .2s ease-in-out;
+}
+
+#socials-box a:hover {
+    background: var(--logo-box-background);
+}
+
+
+@media screen and (max-width: 1222px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 888px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 588px) {
+    html {
+        font-size: 6px;
+    }
+}

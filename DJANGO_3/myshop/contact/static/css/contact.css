@@ -1,0 +1,88 @@
+
+.company-info, .company-contact {
+    padding: 4rem;
+    margin-top: 2rem;
+}
+
+.company-info {
+    border-right: 1px dashed black;
+    padding-right: 6rem;
+}
+
+.title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 1.4rem;
+}
+
+li {
+    padding: .5rem 0;
+    font-size: 1.2rem;
+}
+
+.contact-form p label {
+    width: 13rem;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+input[name='name'], input[name='email'] {
+    width: 13rem;
+}
+
+form p {
+    display: flex;
+    margin: 2rem 1.4rem;
+}
+
+p input {
+    height: 2rem;
+}
+
+#contact-form-submit {
+    padding: .5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: auto;
+    text-transform: uppercase;
+    margin-left: auto
+}
+
+form p:nth-child(4) {
+    display: block !important;
+}
+
+form p:nth-child(4) label {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+form p:nth-child(4) textarea {
+    width: 100%;
+    height: 12rem;
+    resize: none;
+    padding: .5rem;
+    line-height: 1.5;
+}
+
+.success {
+    color: green;
+    float: right;
+    text-transform: uppercase;
+    margin: 0 1.4rem 2rem 1.4rem;
+    font-weight: bold;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}

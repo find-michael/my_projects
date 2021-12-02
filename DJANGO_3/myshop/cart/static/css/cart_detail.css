@@ -1,0 +1,216 @@
+#content {
+    display: block !important;
+    padding: 0 8rem;
+    background: linear-gradient(to left, var(--nav-background), var(--logo-box-background));
+}
+
+.recommendations {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.recommendations h3 {
+    text-align: center;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.recommendations-placeholder {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6rem;
+}
+
+.recommendations-item {
+    border: 1px solid black;
+    background: white;
+    margin: 0 1rem;
+    transition: .2s ease-in-out;
+}
+
+.recommendations-item:hover {
+    transform: perspective(10rem) translateZ(.4rem);
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%)
+}
+
+.recommendations-item a:nth-child(1) {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.recommendations-item a:nth-child(1) img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.recommendations-item a:nth-child(2) {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    padding: .4rem .2rem .4rem .2rem;
+}
+
+.no-image-opacity {
+    opacity: .5;
+}
+
+.cart-title {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.quantity-form {
+    display: flex;
+    align-items: center;
+}
+
+#id_quantity {
+    height: 2rem;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.quantity-form input[type='submit'] {
+    height: 2rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+
+table {
+    width:100%;
+    border-spacing:0;
+    border-collapse: collapse; 
+}
+
+table th, table td {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+table th {
+    padding: 1rem 1rem 1rem 0;
+}
+
+
+table td, table th:nth-child(1) {
+    padding: 1rem;
+}
+
+tbody tr {
+    background: white;
+}
+
+tr.subtotal, tr.discount, tr.delivery {
+    font-weight: 500;
+}
+
+tbody tr.subtotal {
+    background: var(--logo-box-background);
+}
+
+thead tr, tbody tr.total {
+    background: var(--nav-background);
+    color: white;
+    text-transform: uppercase;
+}
+
+tr.delivery {
+    background: var(--logo-box-background);
+    text-transform: uppercase;
+}
+
+table.cart {
+    margin-bottom: 3rem;
+}
+
+.table-image {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.table-image img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+tbody td.number {
+    text-align: right;
+}
+
+.neg {
+    color: red;
+    font-weight: bold;
+}
+
+tr:last-child {
+    font-weight: bold;
+}
+
+th:last-child {
+    float: right;
+}
+
+.below-table, .above-table {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apply-coupon-box p {
+    margin-bottom: .5rem;
+}
+
+.apply-coupon-box form input {
+    height: 2rem;
+    font-size: .9rem;
+}
+
+.apply-coupon-box form input[type='submit'] {
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.cart-final-buttons {
+    display: flex;
+}
+
+.cart-final-buttons a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.button-continue-shopping {
+    background: var(--logo-box-background);
+}
+
+.button-pay {
+    background: #a47be6;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 8rem;
+    text-align: center;
+}
+

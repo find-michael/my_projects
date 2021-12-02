@@ -1,0 +1,16 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static "css/done.css" %}">
+{% endblock %}
+
+{% block title %}{% trans "Płatność zakończona" %}{% endblock %}
+
+{% block content %}
+<h2>{% trans "Twoja płatność zakończyła się powodzeniem" %}!</h2>
+<p>{% trans "Płatność otrzymana" %}.</p>
+<p>{% trans "Numer twojego zamówienia to" %}: <span class="order-id">{{ order_id }}</span></p>
+<p>{% trans "Na email podany w zamówieniu został wysłany rachunek. Dziękujemy za skorzystanie z naszego sklepu" %} :)</p>
+{% endblock %}

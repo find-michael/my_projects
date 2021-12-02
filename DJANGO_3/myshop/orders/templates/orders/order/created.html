@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Dziękujemy za złożenie zamówienia!" %}
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Dziękujemy za złożenie zamówienia!" %}</h1>
+    <p>{% trans "Twoje zamówienie jest w trakcie realizacji. Numer twojego zamówienia to" %}: <strong>{{ order.id }}</strong>.</p>
+{% endblock %}

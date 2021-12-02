@@ -1,0 +1,85 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} Pay with credit card {% endblock %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static "css/process.css" %}">
+{% endblock %}
+
+{% block content %}
+<section class="process">
+    <div class="title">{% trans "Zapłać swoją kartą kredytową" %}</div>
+    <form action="." id="payment" method="post">
+
+        <label for="card-number">{% trans "Numer karty" %}</label>
+        <div id="card-number" class="field"></div>
+
+        <label for="cvv">{% trans "CVV" %}</label>
+        <div id="cvv" class="field"></div>
+
+        <label for="expiration-date">{% trans "Data ważności" %}</label>
+        <div id="expiration-date" class="field"></div>
+
+        <input type="hidden" id="nonce" name="payment_method_nonce">
+        {% csrf_token %}
+        <input type="submit" value="{% trans "Zapłać" %}">
+    </form>
+
+    <!-- załadowanie wymaganych komponentów klienta -->
+    <script src="https://js.braintreegateway.com/web/3.29.0/js/client.min.js"></script>
+    <!-- załadowanie komponentu Hosted Fields -->
+    <script src="https://js.braintreegateway.com/web/3.29.0/js/hosted-fields.min.js"></script>
+
+    <script>
+        var form = document.querySelector('#payment');
+        var submit = document.querySelector('input[type="submit"]');
+
+        braintree.client.create({
+            authorization: '{{ client_token }}'
+        }, function (clientErr, clientInstance) {
+            if (clientErr) {
+                console.error(clientErr);
+                return;
+            }
+
+        braintree.hostedFields.create({
+            client: clientInstance,
+            styles: {
+                'input': {'font-size': '13px'},
+                'input.invalid': {'color': 'red'},
+                'input.valid': {'color': 'green'}
+            },
+            fields: {
+                number: {selector: '#card-number'},
+                cvv: {selector: '#cvv'},
+                expirationDate: {selector: '#expiration-date'}
+            }
+        }, function (hostedFieldsErr, hostedFieldsInstance) {
+            if (hostedFieldsErr) {
+                console.error(hostedFieldsErr);
+                return;
+            }
+
+            submit.removeAttribute('disabled');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+            hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+                if (tokenizeErr) {
+                    console.error(tokenizeErr);
+                    return;
+                }
+                // ustawienie tokena nonce w celu przesłania na serwer
+                document.getElementById('nonce').value = payload.nonce;
+                // przesłanie formularza
+                document.getElementById('payment').submit();
+            });
+            }, false);
+        });
+        });
+    </script>
+</section>
+{% endblock %}

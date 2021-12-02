@@ -1,0 +1,240 @@
+#sidebar {
+    min-height: 100%;
+    min-width: 16rem;
+    background: var(--logo-box-background);
+    position: relative;
+}
+
+#main {
+    width: 100%;
+    background: linear-gradient(to left, var(--nav-background), var(--logo-box-background));
+    padding-bottom: 6rem;
+}
+
+#search-form {
+    margin: 2rem 1rem 3rem;
+    display: flex;
+    width: auto;
+}
+
+#search-form input[type='text'] {
+    width: 100%;
+    height: 2rem;
+    font-size: .9rem;
+}
+
+#search-form input[type='submit'] {
+    margin-left: .5rem;
+    height: 2rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.search-text, .category-text {
+    padding: 1rem 1rem 1rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.main-category-text {
+    padding: 2rem 2rem 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.main-category-text span:nth-child(1), a {
+    text-transform: none;
+    font-weight: normal;
+}
+
+.main-category-text span:nth-child(2) {
+    margin: 0 1rem;
+}
+
+.main-category-text a {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    opacity: .5;
+    transition: opacity .2s ease-in-out;
+}
+
+.main-category-text a:hover {
+    opacity: 1;
+}
+
+.search-result-text {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.search-result-text span:nth-child(2) {
+    font-weight: bold;
+    margin: 0 .5rem;
+}
+
+.search-result-text a {
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    opacity: .5;
+    transition: opacity .2s ease-in-out;
+}
+
+.search-result-text a:hover {
+    opacity: 1;
+}
+
+.category-text {
+    border-top: 1px solid black;
+}
+
+#sidebar ul li {
+    margin: .5rem .5rem .5rem 0;
+    list-style-type: none;
+    text-transform: uppercase;
+    transition: background .2s ease-in-out;
+}
+
+#sidebar ul li:hover {
+    background: var(--nav-background);
+    
+}
+
+#sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding: .5rem;
+    font-weight: 500;
+}
+
+.selected {
+    background: var(--nav-background);
+}
+
+#products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+    margin: 2rem;
+}
+
+.list-item {
+    width: 100%;
+    position: relative;
+    border: 1px solid black;
+    padding-top: 100%;
+    box-sizing: content-box;
+    transition: transform .2s ease-in-out;
+    background: white;
+    overflow: hidden;
+}
+
+.list-item:hover {
+    transform: perspective(10rem) translateZ(.4rem);
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    cursor: pointer;
+}
+
+.list-item:hover .add-to-cart {
+    transform: translateY(4rem)
+}
+
+.add-to-cart {
+    position: absolute;
+    top: calc(-4rem - 1px);
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+
+.quantity-form {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-bottom: 1px solid black;
+}
+
+.quantity-form label {
+    font-size: 1.2rem;
+}
+
+#id_quantity {
+    height: 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.quantity-form input[type='submit'] {
+    height: 2rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.item-image {
+    position:  absolute;
+    top: 2rem;
+    left: 0;
+    bottom: 2rem;
+    right: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.item-image img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.item-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    padding-top: .4rem;
+}
+
+.item-price {
+    display: block;
+    height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.item-price span {
+    text-transform: none;
+    font-weight: normal;
+}
+
+.no-items-found {
+    font-size: 2rem;
+}
+
+.no-image-opacity {
+    opacity: .5;
+}
+
+

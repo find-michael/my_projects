@@ -1,0 +1,14 @@
+section.cookies {
+    padding: 2rem 10% 6rem 10%;
+}
+
+.title {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section.cookies p {
+    margin: 2rem;
+}

@@ -1,0 +1,60 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+    {{ product.name }}
+{% endblock %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static "css/detail.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="product-detail">
+        <div class="product-detail-image">
+            <div class="image-inner">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}">
+                {% else %}
+                    <img src="{% static "img/no_image.svg" %}" class="no-image-opacity">
+                {% endif %}
+            </div>
+        </div>
+        <div class="product-detail-content">
+            <div class="product-detail-category">
+                <a href="{{ product.category.get_absolute_url }}">{% trans "Kategoria:" %} {{ product.category }}</a>
+            </div>
+            <div class="product-detail-name">{{ product.name }}</div>
+            <p class="price">{% trans "Cena:" %} &nbsp;{{ product.price }} zł</p>
+            <form class="quantity-form" action="{% url "cart:cart_add" product.id %}" method="post">
+                {{ cart_product_form }}
+                {% csrf_token %}
+                <input type="submit" value="{% trans "Dodaj do koszyka" %}">
+            </form>
+            <div class="product-description">
+                <p>{% trans "Opis:" %}</p>
+                {{ product.description|linebreaks }}
+            </div>
+        </div>
+    </div>
+    {% if recommended_products %}
+        <div class="recommendations">
+            <h3>{% trans "Z tym produktem klienci kupowali również:" %}</h3>
+            <div class="recommendations-placeholder">
+            {% for p in recommended_products %}
+                <div class="recommendations-item">
+                    <a href="{{ p.get_absolute_url }}">
+                    {% if p.image %}
+                        <img src="{{ p.image.url }}">
+                    {% else %}
+                        <img src="{% static "img/no_image.svg" %}" class="no-image-opacity">
+                    {% endif %}
+                    </a>
+                    <a href="{{ p.get_absolute_url }}">{{ p.name }}</a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

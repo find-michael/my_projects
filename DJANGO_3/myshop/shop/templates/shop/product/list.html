@@ -1,0 +1,89 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+    {% if category %}{{ category.name }}{% else %}{% trans "Produkty" %}{% endif %}
+{% endblock %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static "css/list.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="sidebar">
+        <div class="search-text">{% trans "Znajdź produkt" %}</div>
+        <form id="search-form" method="get">
+            {{ search_product_form }}
+            <input type="submit" value="{% trans "Szukaj" %}">
+        </form>
+        <div class="category-text">{% trans "Kategorie" %}</div>
+        <ul>
+            <li {% if not category %}class="selected" {% endif %}>
+                <a href="{% url "shop:product_list" %}">{% trans "Wszystkie" %}</a>
+            </li>
+            {% for c in categories %}
+                <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="main">
+    {% if category %}
+        <div class="main-category-text">
+            <span>{% trans "Kategoria" %}:</span>
+            <span>{{ category.name }}</span>
+            <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                    <path
+                        fill="#000000"
+                        d="M12,2C6.47,2 2,6.47 2,12s4.47,10 10,10 10,-4.47 10,-10S17.53,2 12,2zM17,15.59L15.59,17 12,13.41 8.41,17 7,15.59 10.59,12 7,8.41 8.41,7 12,10.59 15.59,7 17,8.41 13.41,12 17,15.59z"/>
+                </svg>
+            </a>
+        </div>
+    {% else %}
+        <div class="main-category-text">{% trans "Wszystkie produkty" %}</div>
+    {% endif %}
+    {% if search_input %}
+        <div class="search-result-text">
+            <span>{% trans "Twoja wyszukiwana wartość to" %}:</span>
+            <span>{{ search_input }}</span>
+            <a href=".">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                    <path
+                        fill="#000000"
+                        d="M12,2C6.47,2 2,6.47 2,12s4.47,10 10,10 10,-4.47 10,-10S17.53,2 12,2zM17,15.59L15.59,17 
+                        12,13.41 8.41,17 7,15.59 10.59,12 7,8.41 8.41,7 12,10.59 15.59,7 17,8.41 13.41,12 17,15.59z"/>
+                </svg>
+            </a>
+        </div>
+    {% endif %}
+        <div id="products-list">
+        {% if products %}
+            {% for product in products %}
+                <div class="list-item">
+                    <a href="{{ product.get_absolute_url }}" class="item-name">{{ product.name }}</a>
+                    <a href="{{ product.get_absolute_url }}" class="item-image">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}">
+                    {% else %}
+                        <img src="{% static "img/no_image.svg" %}" class="no-image-opacity">
+                    {% endif %}
+                    </a>
+                    <a href="{{ product.get_absolute_url }}" class="item-price">{{ product.price }}<span> zł</span></a>
+                    <div class="add-to-cart">
+                        <form class="quantity-form" action="{% url "cart:cart_add" product.id %}" method="post">
+                            {{ cart_product_form }}
+                            {% csrf_token %}
+                            <input type="submit" value="{% trans "Dodaj do koszyka" %}">
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-items-found">{% trans "Nie znaleziono żadnego przedmiotu o podanej nazwie" %}. &nbsp;:(</div>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}
